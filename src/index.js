@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import Hello from './Hello';
+import Routes from './routes';
 
 import 'normalize.css';
 import './main.less';
@@ -10,7 +11,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello />
+        <Router>
+          <Routes/>
+        </Router>
       </div>);
   }
 }
