@@ -36,7 +36,7 @@ Child1.contextTypes = {
   color: PropTypes.string,
 }
 
-export default class TestContext extends React.Component {
+export default class Index extends React.Component {
   state = {
     name: '',
     color: 'default',
@@ -83,7 +83,7 @@ export default class TestContext extends React.Component {
     </div>);
   }
 }
-TestContext.childContextTypes = {
+Index.childContextTypes = {
   color: PropTypes.string,
 }
 

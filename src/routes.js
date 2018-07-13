@@ -3,6 +3,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import Hello from './pages/Hello';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import Motion from './pages/Motion';
 
 const routes = [
   {
@@ -13,6 +14,10 @@ const routes = [
   {
     path: '/about',
     component: About,
+  },
+  {
+    path: '/motion',
+    component: Motion,
   },
   {
     component: NotFound,
