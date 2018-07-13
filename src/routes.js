@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import Hello from './Hello';
-import About from './About';
-import NotFound from './NotFound';
+import Hello from './pages/Hello';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 const routes = [
   {
