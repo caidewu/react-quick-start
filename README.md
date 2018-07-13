@@ -5,5 +5,15 @@
 
 ## 组成
 
-- React16
-- React
+- React 16.4.x
+- React Router 4.3.x
+
+## 开始
+
+```
+# 安装依赖
+yarn
+
+# 运行
+yarn start
+```
