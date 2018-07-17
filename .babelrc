@@ -3,5 +3,13 @@
     ["env", {"modules": false }],
     "stage-0",
     "react"
+  ],
+  "plugins": [
+    [
+      "import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es"
+    }
+    ]
   ]
 }

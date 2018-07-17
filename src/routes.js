@@ -4,6 +4,7 @@ import Hello from './pages/Hello';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Motion from './pages/Motion';
+import Antd from './pages/Antd';
 
 const routes = [
   {
@@ -18,6 +19,10 @@ const routes = [
   {
     path: '/motion',
     component: Motion,
+  },
+  {
+      path: '/antd',
+      component: Antd,
   },
   {
     component: NotFound,
