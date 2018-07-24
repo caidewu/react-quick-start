@@ -1,86 +1,121 @@
 @import "../node_modules/antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
 
-@primary-color: #fa541c; // 不会影响主题样式
-
-// reset
-body {
-  background: #f5f5f5;
-}
-
-ul {
-  padding: 0;
-  li {
-    list-style-type:none;
-  }
-}
-
-
-// 可配置的水平垂直居中
-.center() {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.container {
-  .center();
-  .content {
-    font-size: 60px;
-  }
-}
-
-// motion style
-
-.motion-demo {
-  .demo-header {
-    width: 100%;
-    background: #364768;
-    height: 88px;
-    line-height: 88px;
-    position: relative;
+:global {
+  // reset
+  body {
+    margin: 20px;
+    background: #f5f5f5;
   }
 
-  .demo-banner {
-    background: #364d79;
-    height: 300px;
-    position: relative;
-    .point {
-      text-align: center;
+  // 可配置的水平垂直居中
+  .center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .container {
+    .center();
+    .content {
+      font-size: 60px;
+    }
+  }
+  // motion style
+
+  .motion-demo {
+    .demo-header {
       width: 100%;
-      position: absolute;
-      bottom: 5px;
-      ul>li {
-        width: 6px;
-        height: 6px;
-        background: hsla(0,0%,100%,.15);
-        display: inline-block;
-        border-radius: 6px;
-        margin: 0 5px;
+      background: #364768;
+      height: 88px;
+      line-height: 88px;
+      position: relative;
+    }
+
+    .demo-banner {
+      background: #364d79;
+      height: 300px;
+      position: relative;
+      .point {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        ul>li {
+          width: 6px;
+          height: 6px;
+          background: hsla(0,0%,100%,.15);
+          display: inline-block;
+          border-radius: 6px;
+          margin: 0 5px;
+        }
       }
     }
-  }
 
-  .demo-page {
-    position: relative;
-    height: 500px;
-    >h1 {
-      width: 30%;
-      height: 40px;
-      background: rgba(1,155,240,.35);
-      margin: 20px auto;
+    .demo-page {
+      position: relative;
+      height: 500px;
+      >h1 {
+        width: 30%;
+        height: 40px;
+        background: rgba(1,155,240,.35);
+        margin: 20px auto;
+      }
+      >p {
+        display: block;
+        overflow: hidden;
+        &:before {
+          content: "";
+          display: block;
+          margin: 20px auto;
+          width: 75%;
+          height: 20px;
+          background: rgba(1,155,240,.35);
+        }
+        &:after {
+          content: "";
+          display: block;
+          margin: 20px auto;
+          width: 20%;
+          height: 20px;
+          background: rgba(1,155,240,.35);
+        }
+      }
+      .box {
+        position: relative;
+        margin-top: 10px;
+        height: 250px;
+        overflow: hidden;
+        ul {
+          .center();
+          min-width: 760px;
+          li {
+            position: relative;
+            display: inline-block;
+            margin-right: 80px;
+            width: 200px;
+            height: 200px;
+            background: rgba(1,155,240,.55);
+            border-radius: 10px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
     }
-    >p {
-      display: block;
+    .demo-footer {
+      height: 100px;
+      background: #364768;
       overflow: hidden;
       &:before {
         content: "";
         display: block;
         margin: 20px auto;
-        width: 75%;
+        width: 70%;
         height: 20px;
-        background: rgba(1,155,240,.35);
+        background: #4d5c76;
       }
       &:after {
         content: "";
@@ -88,51 +123,10 @@ ul {
         margin: 20px auto;
         width: 20%;
         height: 20px;
-        background: rgba(1,155,240,.35);
+        background: #4d5c76;
       }
-    }
-    .box {
-      position: relative;
-      margin-top: 10px;
-      height: 250px;
-      overflow: hidden;
-      ul {
-        .center();
-        min-width: 760px;
-        li {
-          position: relative;
-          display: inline-block;
-          margin-right: 80px;
-          width: 200px;
-          height: 200px;
-          background: rgba(1,155,240,.55);
-          border-radius: 10px;
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-  }
-  .demo-footer {
-    height: 100px;
-    background: #364768;
-    overflow: hidden;
-    &:before {
-      content: "";
-      display: block;
-      margin: 20px auto;
-      width: 70%;
-      height: 20px;
-      background: #4d5c76;
-    }
-    &:after {
-      content: "";
-      display: block;
-      margin: 20px auto;
-      width: 20%;
-      height: 20px;
-      background: #4d5c76;
     }
   }
 }
+
+
