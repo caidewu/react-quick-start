@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import App from './App';
+import Routes from './routes';
 
+import 'normalize.css';
+import './main.less';
 
-const render = () => ReactDOM.render(
-    <AppContainer>
-        <App />
-    </AppContainer>
-    , document.getElementById('app'));
-
-render();
-
-if (module.hot) {
-  // Reload components
-  module.hot.accept('./App', () => {
-    render();
-  });
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Routes/>
+        </Router>
+      </div>);
+  }
 }
+
+
+const mountNode = document.getElementById('app');
+ReactDOM.render(<App/>, mountNode);
