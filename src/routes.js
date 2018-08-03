@@ -4,6 +4,8 @@ import Hello from './pages/Hello';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Motion from './pages/Motion';
+import Antd from './pages/Antd';
+import { TestLessImport } from './pages/playground/TestLessImport';
 
 const routes = [
   {
@@ -18,6 +20,14 @@ const routes = [
   {
     path: '/motion',
     component: Motion,
+  },
+  {
+      path: '/antd',
+      component: Antd,
+  },
+  {
+    path: '/less',
+    component: TestLessImport,
   },
   {
     component: NotFound,
