@@ -20,13 +20,25 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",
-    "babel-plugin-import": "^1.8.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "parcel-bundler": "^1.4.1",
-    "postcss-modules": "^1.3.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
+    "parcel-bundler": "^1.9.7",
+    "postcss-modules": "^1.3.2",
     "rimraf": "^2.6.2"
+  },
+  "postcss": {
+    "modules": true,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 9"
+        ],
+        "flexbox": "no-2009",
+        "grid": true
+      }
+    }
   }
 }
